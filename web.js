@@ -1,12 +1,16 @@
-#!/usr/bin/env node
 
 var express = require('express');
+
+var fs = require('node');
+
+var buffer = new Buffer(100);
 
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-    fs.readFileSync('index.html');
-    reponse.send(buffer.toString());
+    var buffer = fs.readFileSync('index.html');
+    var buffer = buf.toString();
+    reponse.send(buffer);
 //  response.send('Hello World 2!');
 });
 
