@@ -9,7 +9,7 @@ var buffer = new Buffer(100);
 
 app.get('/', function(request, response) {
     var buffer = fs.readFileSync('index.html');
-    var buffer = buf.toString();
+    var buffer = buffer.toString();
     reponse.send(buffer);
 //  response.send('Hello World 2!');
 });
