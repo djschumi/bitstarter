@@ -46,7 +46,8 @@ var loadChecks = function(checksfile) {
 };
 
 var restlerUrlFile = function(urlfile) {
-    return cheerio.load(fs.readFileSync(rest.get(urlfile).on('complete',function(data))));
+    return cheerio.load(fs.readFileSync(rest.get(urlfile).on('complete', function(data) {
+  sys.puts(data[0].message)}) ) );
 };
 
 var checkHtmlFile = function(htmlfile, checksfile,urlfile) {
